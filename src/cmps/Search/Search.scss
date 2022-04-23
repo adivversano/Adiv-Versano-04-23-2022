@@ -1,0 +1,163 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/functions.scss";
+
+.search-container {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 5;
+    &.open {
+        border-radius: $brd7;
+        .input-container {
+            border-radius: $brd7-up;
+            box-shadow: $bs-medium-dark;
+            z-index: 1;
+            > input {
+                border-radius: $brd7-up;
+            }
+        }
+        .auto-complete-container {
+            visibility: visible;
+            max-height: 180px;
+            animation: expand 0.3s;
+        }
+    }
+    &.dark {
+        &.open {
+            .input-container {
+                box-shadow: $bs-medium-light;
+            }
+        }
+        .input-container {
+            > input {
+                color: $clr1;
+                background-color: $clr4;
+                caret-color: $clr1;
+                box-shadow: $bs-light;
+                &.focused {
+                    box-shadow: $bs-medium-light;
+                }
+            }
+        }
+        .auto-complete-container {
+            color: $clr1;
+            background-color: $clr4;
+            caret-color: $clr1;
+            box-shadow: $bs-medium-light;
+            > li {
+                &:hover {
+                    background-color: $clr5;
+                }
+            }
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            border-radius: $brd7;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: $clr3;
+            border-radius: 0 0 7px 0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: $clr5;
+            border-radius: 7px;
+            transition: background-color 0.3s;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: $clr4;
+        }
+    }
+    .error {
+        background-color: rgb(186, 41, 41);
+        color: $clr2;
+        border-radius: $brd7;
+        position: absolute;
+        padding: 5px;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: fit-content;
+        animation: fade-in 0.3s;
+        z-index: 10;
+    }
+    .input-container {
+        width: 100%;
+        transition: box-shadow 0.3s;
+        > input {
+            height: 50px;
+            color: $clr4;
+            caret-color: $clr3;
+            font-size: rem(20px);
+            padding-left: 45px;
+            width: 100%;
+            box-shadow: $bs-light-dark;
+            background-color: $clr2;
+            border-radius: $brd7;
+            transition: box-shadow 0.3s;
+            &.focused {
+                box-shadow: $bs-medium-dark;
+            }
+        }
+        > svg {
+            fill: $clr3;
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 15px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+    }
+    .auto-complete-container {
+        visibility: hidden;
+        overflow: auto;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: auto;
+        max-height: 0;
+        font-size: rem(14px);
+        background-color: $clr2;
+        border-radius: $brd7-down;
+        box-shadow: $bs-medium-dark;
+        transition: height 0.3s, box-shadow 0.3s;
+        > li {
+            padding: 10px 45px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: $clr1;
+            }
+            &:last-child {
+                border-radius: $brd7-down;
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        border-radius: $brd7;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: $clr1;
+        border-radius: 0 0 7px 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: $clr3;
+        border-radius: 7px;
+        transition: background-color 0.3s;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: $clr3;
+    }
+}

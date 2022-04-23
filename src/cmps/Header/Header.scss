@@ -1,0 +1,104 @@
+@import "../../styles/setup/functions.scss";
+@import "../../styles/setup/variables.scss";
+
+header {
+    height: 55px;
+    background-color: $clr4;
+    color: $clr1;
+    .header-wrapper {
+        > .logo {
+            font-size: rem(22px);
+            font-weight: 700;
+            position: relative;
+            cursor: default;
+            user-select: none;
+            &:hover {
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+            .icon {
+                position: absolute;
+                right: 1px;
+                top: 3px;
+                height: 25px;
+                width: 25px;
+                fill: $clr1;
+                transform: rotate(40deg);
+                transition: transform 5s;
+            }
+            > span {
+                position: relative;
+                z-index: 1;
+            }
+        }
+        > nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            .btns-container {
+                display: flex;
+                box-shadow: 2px 0px 0px #e6e6e630;
+                padding: 0 25px;
+                .toggle-degree-btn {
+                    width: 32px;
+                    height: 32px;
+                    font-size: rem(18px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $clr3;
+                    margin-right: 15px;
+                    &:hover {
+                        color: $clr1;
+                    }
+                }
+                .dark-mode-btn,
+                .toggle-degree-btn {
+                    cursor: pointer;
+                    padding: 2px;
+                    fill: $clr3;
+                    border: 2px solid $clr5;
+                    border-radius: $brd7;
+                    display: flex;
+                    transition: fill 0.3s, border 0.3s, background-color 0.3s;
+                    background-color: $clr4;
+                    &.dark {
+                        &:hover {
+                            fill: $clr4;
+                            background-color: $clr1;
+                            border: 2px solid $clr3;
+                        }
+                    }
+                    svg {
+                        height: 100%;
+                        width: 100%;
+                    }
+                    &:hover {
+                        fill: $clr1;
+                        border: 2px solid $clr1;
+                    }
+                }
+            }
+            > a {
+                display: flex;
+                align-items: center;
+                font-size: rem(18px);
+                font-weight: 500;
+                padding: 0 25px;
+                > span {
+                    transition: transform 0.3s, box-shadow 0.3s;
+                }
+                &:hover {
+                    > span {
+                        transform: translateY(2px);
+                        box-shadow: 0 1px 0 $clr1;
+                    }
+                }
+            }
+            :not(:last-child) {
+                margin-inline-end: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.main-container {
+    display: grid;
+    grid-template-columns:
+        minmax(10px, 1fr)
+        minmax(0, 768px)
+        minmax(10px, 1fr);
+    > * {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 / -1;
+        }
+    }
+
+    @include for-narrow-layout {
+        grid-template-columns:
+            minmax(1rem, 1fr)
+            minmax(auto, $narrow-breakpoint)
+            minmax(1rem, 1fr);
+    }
+
+    @include for-wide-layout {
+        grid-template-columns:
+            minmax(2rem, 1fr)
+            minmax(auto, $wide-breakpoint)
+            minmax(2rem, 1fr);
+    }
+}

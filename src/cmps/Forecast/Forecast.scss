@@ -1,0 +1,63 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/functions.scss";
+@import "../../styles/setup/mixins.scss";
+
+.forecast {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: $clr2;
+    box-shadow: $bs-medium-dark;
+    border-radius: $brd7;
+    @include for-narrow-layout {
+        min-height: 500px;
+    }
+    &.dark {
+        background-color: $clr4;
+        box-shadow: $bs-medium-light;
+        .forecast-info {
+            color: $clr1;
+            .favorite-btn {
+                fill: $clr1;
+            }
+        }
+        .forecast-text {
+            color: $clr1;
+        }
+    }
+    .forecast-info {
+        width: 100%;
+        align-self: flex-start;
+        margin-bottom: 30px;
+        @include for-narrow-layout {
+            margin-bottom: unset;
+        }
+        .favorite-btn {
+            cursor: pointer;
+            transition: fill 0.3s;
+            fill: $clr3;
+            &:hover {
+                fill: #de1d1d;
+            }
+            &.filled {
+                fill: #de1d1d;
+                &:hover {
+                    fill: #b13d3d;
+                }
+            }
+        }
+    }
+    .forecast-text {
+        text-align: center;
+        max-width: 500px;
+        font-size: rem(30px);
+        font-weight: 400;
+        transform: translateY(-100%);
+        animation: fade-in 1s ease-in forwards, move-down 1s cubic-bezier(0.06, 0.91, 1, 1) forwards;
+        margin-bottom: 30px;
+        @include for-narrow-layout {
+            margin-bottom: unset;
+        }
+    }
+}

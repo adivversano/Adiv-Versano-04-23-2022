@@ -1,0 +1,66 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/functions.scss";
+@import "../../styles/setup/mixins.scss";
+
+.favorites {
+    margin-top: 50px;
+    &.dark {
+        color: $clr1;
+        .favorites-list {
+            > a {
+                li {
+                    box-shadow: $bs-medium-light;
+                }
+            }
+        }
+    }
+    .title {
+        margin-bottom: 10px;
+        font-size: rem(38px);
+        opacity: 0;
+        animation: fade-in .3s ease-in forwards;
+        @include for-narrow-layout {
+            font-size: rem(40px);
+        }
+        @include for-wide-layout {
+            font-size: rem(42px);
+        }
+    }
+    .favorites-list {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        @include for-narrow-layout {
+            flex-direction: unset;
+        }
+        @include for-wide-layout {
+            justify-content: unset;
+        }
+        > a {
+            li {
+                padding: 40px 10px;
+                box-shadow: $bs-medium-dark;
+                border-radius: $brd7;
+                opacity: 0;
+                transform: translateY(-100%);
+                transition: background-color .3s;
+                min-width: 100%;
+                @include for-narrow-layout {
+                    min-width: 180px;
+                }
+                img {
+                    margin-bottom: 2px;
+                }
+                .city {
+                    font-size: rem(18px);
+                }
+                &:hover {
+                    background-color: $clr5;
+                    color: $clr1;
+                }
+            }
+        }
+    }
+}
