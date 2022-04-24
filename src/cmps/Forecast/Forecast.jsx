@@ -18,15 +18,12 @@ export const Forecast = () => {
 
     const onToggleFavorite = async () => {
         try {
-            //UPDATING REDUX
             dispatch(toggleFavorite());
             if (isFavorite) {
-                //DELETING FROM STORAGE
                 setFavorites(favorites.filter(favorite => {
                     return favorite?.key !== key
                 }));
             } else {
-                //SAVING TO STORAGE
                 const cityWeatherToUpdate = { ...cityWeather };
                 delete cityWeatherToUpdate.fiveDaysForecast;
                 const updatedFavorite = await weatherService.updateCurrForecast(cityWeatherToUpdate);

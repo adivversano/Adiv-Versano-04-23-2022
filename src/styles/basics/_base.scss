@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    background-color: #fefefe;
+    // background-color: #fefefe;
     // background-color: #3f3f3f;
 }
 
@@ -44,4 +44,13 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.app {
+    min-height: 100vh;
+    background-color: #fefefe;
+    grid-template-rows: max-content;
+    &.dark {
+        background-color: #191919;
+    }
 }

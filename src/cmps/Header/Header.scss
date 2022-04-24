@@ -72,10 +72,6 @@ header {
                             border: 2px solid $clr3;
                         }
                     }
-                    svg {
-                        height: 100%;
-                        width: 100%;
-                    }
                     &:hover {
                         fill: $clr1;
                         border: 2px solid $clr1;
@@ -87,7 +83,6 @@ header {
                 align-items: center;
                 font-size: rem(18px);
                 font-weight: 500;
-                // padding: 0 25px;
                 > span {
                     transition: transform 0.3s, box-shadow 0.3s;
                 }

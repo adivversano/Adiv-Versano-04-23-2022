@@ -39,15 +39,8 @@ export const App = () => {
     });
   }, [error])
 
-  useEffect(()=> {
-    const currColor = document.body.style.backgroundColor;
-    if (currColor !== 'rgb(25, 25, 25)' && isDarkMode) document.body.style.backgroundColor = '#191919';
-    else if (currColor === 'rgb(25, 25, 25)' && !isDarkMode) document.body.style.backgroundColor = '#E6E6E6';
-  }, [isDarkMode])
-
-
   return (
-    <div className="main-container">
+    <div className={`app main-container${isDarkMode ? ' dark' : ''}`}>
       <Header />
 
       <main>
