@@ -39,7 +39,8 @@ header {
             .btns-container {
                 display: flex;
                 box-shadow: 2px 0px 0px #e6e6e630;
-                padding: 0 25px;
+                padding-right: 15px;
+                margin-right: 15px;
                 .toggle-degree-btn {
                     width: 32px;
                     height: 32px;
@@ -48,7 +49,7 @@ header {
                     align-items: center;
                     justify-content: center;
                     color: $clr3;
-                    margin-right: 15px;
+                    margin-inline-end: 15px;
                     &:hover {
                         color: $clr1;
                     }
@@ -85,7 +86,7 @@ header {
                 align-items: center;
                 font-size: rem(18px);
                 font-weight: 500;
-                padding: 0 25px;
+                // padding: 0 25px;
                 > span {
                     transition: transform 0.3s, box-shadow 0.3s;
                 }
@@ -95,9 +96,9 @@ header {
                         box-shadow: 0 1px 0 $clr1;
                     }
                 }
-            }
-            :not(:last-child) {
-                margin-inline-end: 5px;
+                &:not(:last-child) {
+                    margin-inline-end: 15px;
+                }
             }
         }
     }

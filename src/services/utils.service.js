@@ -99,7 +99,7 @@ export function getAvgDeg(temperature, isCelsius) {
     return avgTempDeg;
 }
 export function isEnglish(string) {
-    const englishReg = /^[a-zA-Z]+$/;
+    const englishReg = /^[a-zA-Z\s]*$/;
     return englishReg.test(string);
 }
 

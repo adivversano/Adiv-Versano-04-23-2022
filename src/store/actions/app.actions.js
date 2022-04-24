@@ -2,9 +2,6 @@ import { weatherService } from "../../services/weather.service";
 
 // Dispatchers
 const _setCityWeather = (cityWeather) => ({ type: 'SET_CITY_WEATHER', cityWeather });
-const _toggleFavorite = () => ({ type: 'TOGGLE_FAVORITE' });
-const _toggleDarkMode = () => ({ type: 'TOGGLE_DARK_MODE' });
-const _toggleDegree = () => ({ type: 'TOGGLE_DEGREE' });
 const _setError = (error) => ({ type: 'SET_ERROR', error });
 
 // THUNK
@@ -35,24 +32,24 @@ export function setCityWeather(cityWeather) {
     }
 }
 
+export function onSetError(error) {
+    return dispatch => {
+        dispatch(_setError(error))
+    }
+}
+
 export function toggleFavorite() {
     return dispatch => {
-        dispatch(_toggleFavorite());
+        dispatch({ type: 'TOGGLE_FAVORITE' });
     }
 }
 export function toggleDegree() {
     return dispatch => {
-        dispatch(_toggleDegree());
+        dispatch({ type: 'TOGGLE_DEGREE' });
     }
 }
 export function toggleDarkMode() {
     return dispatch => {
-        dispatch(_toggleDarkMode());
-    }
-}
-
-export function onSetError(error) {
-    return dispatch => {
-        dispatch(_setError(error))
+        dispatch({ type: 'TOGGLE_DARK_MODE' });
     }
 }

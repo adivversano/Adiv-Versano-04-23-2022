@@ -33,12 +33,12 @@ export const Search = () => {
             setCities([]);
             return;
         }
-        deAutoComplete(value);
+        debouncedAutoComplete(value);
     }
 
 
     const onSetCityWeather = (city = cities[0]) => {
-        deAutoComplete.cancel();
+        debouncedAutoComplete.cancel();
         dispatch(setCityWeather(city))
         setCities([]);
         setIsOpen(false);
@@ -54,8 +54,8 @@ export const Search = () => {
         }
     }
 
-    const deAutoComplete = useMemo(() =>
-        debounce((value) => onAutoComplete(value), 250),
+    const debouncedAutoComplete = useMemo(() =>
+        debounce(onAutoComplete, 250),
         []
     );
 
