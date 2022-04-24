@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Adiv-Versano-04-23-2022/static/css/main.f1682272.css",
-    "main.js": "/Adiv-Versano-04-23-2022/static/js/main.0942bbc5.js",
+    "main.js": "/Adiv-Versano-04-23-2022/static/js/main.f60bf30e.js",
     "static/media/light-icon.svg": "/Adiv-Versano-04-23-2022/static/media/light-icon.ae284edf8683aa81ff0ce64318d5f0c1.svg",
     "static/media/dark-icon.svg": "/Adiv-Versano-04-23-2022/static/media/dark-icon.58595d9c3db8632fbe837cc8c199c179.svg",
     "static/media/sun-icon.svg": "/Adiv-Versano-04-23-2022/static/media/sun-icon.ecbdae47043295785c7a0f6069f8895c.svg",
@@ -10,10 +10,10 @@
     "static/media/search-icon.svg": "/Adiv-Versano-04-23-2022/static/media/search-icon.0ffaf6c20133bb59b1e5f737cf5045c6.svg",
     "static/media/filled-heart.svg": "/Adiv-Versano-04-23-2022/static/media/filled-heart.674e913774b48914ddcbe1fb25cf25cc.svg",
     "main.f1682272.css.map": "/Adiv-Versano-04-23-2022/static/css/main.f1682272.css.map",
-    "main.0942bbc5.js.map": "/Adiv-Versano-04-23-2022/static/js/main.0942bbc5.js.map"
+    "main.f60bf30e.js.map": "/Adiv-Versano-04-23-2022/static/js/main.f60bf30e.js.map"
   },
   "entrypoints": [
     "static/css/main.f1682272.css",
-    "static/js/main.0942bbc5.js"
+    "static/js/main.f60bf30e.js"
   ]
 }
