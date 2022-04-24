@@ -11,9 +11,9 @@ export const weatherService = {
     getByGeoLocation
 }
 
-// const API_KEY = 'hnjILShjEKCIQKW6iLc1xzfu7lJX3v5l';
+const API_KEY = 'hnjILShjEKCIQKW6iLc1xzfu7lJX3v5l';
 // const API_KEY = 'mS8GndWiOSDChHVZpD51kvetaZTQk8hi';
-const API_KEY = 'njjhxkKNmjb5c1GJByDU8G391PWeZiqR';
+// const API_KEY = 'njjhxkKNmjb5c1GJByDU8G391PWeZiqR';
 
 
 async function getCityWeather(cityName = 'Tel Aviv') {
